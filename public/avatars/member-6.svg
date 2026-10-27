@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_member-6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#db2777" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow_member-6" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="40" fill="url(#bg_member-6)" />
+  <circle cx="200" cy="145" r="70" fill="#ffffff" filter="url(#shadow_member-6)" />
+  <circle cx="200" cy="145" r="62" fill="#f1f5f9" />
+  <text x="200" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="900" fill="#db2777" text-anchor="middle" letter-spacing="1">NHN</text>
+  <path d="M75 355 C95 240, 305 240, 325 355 Z" fill="#ffffff" opacity="0.95" filter="url(#shadow_member-6)" />
+  <rect x="50" y="325" width="300" height="42" rx="21" fill="#0f172a" opacity="0.85" />
+  <text x="200" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#fbcfe8" text-anchor="middle" letter-spacing="1">PRODUCT EXPERIENCE</text>
+</svg>
