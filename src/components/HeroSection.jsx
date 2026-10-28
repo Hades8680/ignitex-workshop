@@ -149,7 +149,7 @@ export default function HeroSection({ onOpenWorkshopModal }) {
                         Chào em! Rất khen em đã chủ động so sánh hai phương pháp 💡
                       </p>
                       <p className="text-slate-600 leading-relaxed text-xs sm:text-sm">
-                        Theo đúng bài giảng của <strong>Thầy Dũng trên lớp</strong>, trước khi chọn công cụ, em hãy nhìn lại <em>tập xác định của biến số $x$</em>. Biến $x$ ở đây là số lượng sản phẩm thì có thể nhận giá trị âm hay không?
+                        Theo đúng bài giảng của <strong>Thầy Dũng trên lớp</strong>, trước khi chọn công cụ, em hãy nhìn lại <em>tập xác định của biến số <strong>x</strong></em>. Biến <strong>x</strong> ở đây là số lượng sản phẩm thì có thể nhận giá trị âm hay không?
                       </p>
                       
                       <div className="p-2.5 rounded-xl bg-indigo-50/70 border border-indigo-100 text-[11px] text-indigo-900 space-y-1">
