@@ -70,9 +70,9 @@ export const teamMembers = [
   {
     id: 1,
     name: "Lê Tiến Dũng",
-    role: "Team Leader (Trưởng nhóm Dự án)",
+    role: "Leader",
     roleBadgeColor: "from-sky-500 to-blue-600",
-    academicInfo: "Trưởng nhóm điều phối chiến lược IGNITEX",
+    academicInfo: "Sinh viên Quản trị kinh doanh - Đại học Giao thông Vận tải",
     // ==========================================
     // Ảnh đại diện thật từ thư mục IMG:
     avatarUrl: "./avatars/le-tien-dung.png",
@@ -96,7 +96,7 @@ export const teamMembers = [
   {
     id: 2,
     name: "Lê Quang Thịnh",
-    role: "Core AI & Full-stack Architect",
+    role: "",
     roleBadgeColor: "from-indigo-500 to-purple-600",
     academicInfo: "Sinh viên Công nghệ thông tin - Chất lượng cao K63 - Đại học Giao thông Vận tải",
     // ==========================================
@@ -122,7 +122,7 @@ export const teamMembers = [
   {
     id: 3,
     name: "Thành Đặng Hoàn",
-    role: "System & Data Analytics Engineer",
+    role: "",
     roleBadgeColor: "from-blue-500 to-cyan-600",
     academicInfo: "Sinh viên Công nghệ thông tin - Chất lượng cao K63 - Đại học Giao thông Vận tải",
     // ==========================================
@@ -148,7 +148,7 @@ export const teamMembers = [
   {
     id: 4,
     name: "Đào Quỳnh Anh",
-    role: "Lead Business Analyst & Market Researcher",
+    role: "",
     roleBadgeColor: "from-emerald-500 to-teal-600",
     academicInfo: "Sinh viên Quản trị kinh doanh K66 - Đại học Giao thông Vận tải",
     // ==========================================
@@ -174,7 +174,7 @@ export const teamMembers = [
   {
     id: 5,
     name: "Phạm Toàn Tiến",
-    role: "Growth Strategy & Operations Lead",
+    role: "",
     roleBadgeColor: "from-amber-500 to-orange-600",
     academicInfo: "Sinh viên Quản trị kinh doanh K66 - Đại học Giao thông Vận tải",
     // ==========================================
@@ -200,7 +200,7 @@ export const teamMembers = [
   {
     id: 6,
     name: "Nguyễn Hồng Nhạn",
-    role: "Product Experience & Stakeholder Relations",
+    role: "",
     roleBadgeColor: "from-pink-500 to-rose-600",
     academicInfo: "Sinh viên Quản trị kinh doanh - Chất lượng cao K66 - Đại học Giao thông Vận tải",
     // ==========================================

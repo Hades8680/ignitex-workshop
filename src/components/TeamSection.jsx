@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Quote, Linkedin, Github, Mail, Sparkles, GraduationCap, Award, CheckCircle2, Briefcase } from 'lucide-react';
+import { Quote, Linkedin, Github, Mail, Sparkles, GraduationCap, Award } from 'lucide-react';
 import { teamMembers, teamSectionIntro } from '../data/siteData';
 
 export default function TeamSection() {
@@ -12,7 +12,7 @@ export default function TeamSection() {
       <div className="absolute bottom-10 right-0 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header: Subtitle, Title & Detailed Intro Paragraph */}
         <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/80 text-indigo-700 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-2xs">
@@ -44,7 +44,7 @@ export default function TeamSection() {
         {/* Team Synergy Banner with UTC-15 Background */}
         <div className="mt-16 rounded-3xl relative overflow-hidden border border-slate-200/90 shadow-md">
           {/* UTC 15-Storey Building Background with Gradient Overlay */}
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url('./images/utc-15-tang.jpg')` }}
           />
@@ -115,11 +115,11 @@ function MemberCard({ member, index }) {
       {/* Top accent gradient bar */}
       <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${member.roleBadgeColor}`} />
 
-      {/* Header: Avatar, Name & Academic Role */}
-      <div className="flex items-start gap-4 mb-5">
+      {/* Header: Avatar, Name & Academic Info */}
+      <div className="flex items-start gap-4 mb-4">
         <div className="relative flex-shrink-0">
-          <div className={`p-1.5 rounded-2xl bg-gradient-to-tr ${member.roleBadgeColor} shadow-lg shadow-slate-200/60 group-hover:scale-105 transition-transform duration-300`}>
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-[14px] overflow-hidden bg-slate-100 relative shadow-inner">
+          <div className={`p-1.5 rounded-2xl bg-gradient-to-tr ${member.roleBadgeColor || 'from-sky-500 to-indigo-600'} shadow-lg shadow-slate-200/60 group-hover:scale-105 transition-transform duration-300`}>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-[14px] overflow-hidden bg-slate-100 relative shadow-inner">
               <img
                 src={imgSrc}
                 alt={member.name}
@@ -129,64 +129,38 @@ function MemberCard({ member, index }) {
               />
             </div>
           </div>
-          <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center border border-slate-100">
-            <Award className="w-4 h-4 text-sky-600" />
-          </div>
+          {member.role && (
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center border border-slate-100" title={member.role}>
+              <Award className="w-3.5 h-3.5 text-sky-600" />
+            </div>
+          )}
         </div>
 
         <div className="flex-1 min-w-0 pt-0.5">
-          <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-bold text-white bg-gradient-to-r ${member.roleBadgeColor} shadow-xs mb-1.5`}>
-            {member.role}
-          </span>
+          {member.role && (
+            <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-bold text-white bg-gradient-to-r ${member.roleBadgeColor} shadow-xs mb-1.5`}>
+              {member.role}
+            </span>
+          )}
           <h3 className="font-extrabold text-xl sm:text-2xl text-slate-900 group-hover:text-sky-600 transition-colors truncate">
             {member.name}
           </h3>
-          <p className="text-xs text-slate-500 font-medium line-clamp-2 mt-1 leading-snug">
+          <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1 leading-snug">
             {member.academicInfo}
           </p>
         </div>
       </div>
 
-      {/* Vision Statement (Tuyên ngôn mục tiêu) */}
-      <div className="relative bg-slate-50/90 rounded-2xl p-4 border border-slate-100 mb-5 group-hover:bg-sky-50/40 transition-colors">
+      {/* Vision Statement (Khẩu hiệu / Tuyên ngôn mục tiêu) */}
+      <div className="relative bg-slate-50/90 rounded-2xl p-4 sm:p-5 border border-slate-100 mb-4 group-hover:bg-sky-50/40 transition-colors flex-1 flex flex-col justify-center">
         <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
           <Quote className="w-3.5 h-3.5 text-sky-600 rotate-180" />
-          <span>Tuyên Ngôn Mục Tiêu</span>
+          <span>Khẩu Hiệu / Tuyên Ngôn</span>
         </div>
         <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed font-normal">
           "{member.visionStatement}"
         </p>
       </div>
-
-      {/* 3 Core Responsibilities (Trọng trách chuyên môn sâu) */}
-      <div className="flex-1 mb-5">
-        <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800 uppercase tracking-wider mb-2.5">
-          <Briefcase className="w-3.5 h-3.5 text-indigo-600" />
-          <span>Trọng Trách Trong Dự Án</span>
-        </div>
-        <ul className="space-y-2">
-          {member.coreResponsibilities?.map((resp, i) => (
-            <li key={i} className="flex items-start gap-2 text-xs text-slate-600 leading-snug">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
-              <span>{resp}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Skills Tags */}
-      {member.skills && (
-        <div className="flex flex-wrap gap-1.5 mb-5 pt-3 border-t border-slate-100">
-          {member.skills.map((skill, i) => (
-            <span
-              key={i}
-              className="px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      )}
 
       {/* Footer: Social Contact links */}
       <div className="pt-3 border-t border-slate-100 flex items-center justify-between mt-auto">

@@ -8,23 +8,23 @@ export default function Footer({ onOpenWorkshopModal }) {
   };
 
   return (
-    <footer className="bg-slate-900 text-slate-300 relative overflow-hidden">
-      {/* Workshop Final CTA Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -translate-y-12">
-        <div className="relative rounded-3xl bg-gradient-to-r from-sky-600 via-indigo-600 to-sky-700 p-8 sm:p-12 text-white shadow-2xl border border-sky-400/30 overflow-hidden">
-          {/* Subtle background glow */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+    <footer className="relative bg-slate-900 text-slate-300">
+      {/* Workshop Final CTA Banner: Nổi lên trên, không bị overflow-hidden cắt mép trên */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -translate-y-10 sm:-translate-y-14">
+        <div className="relative rounded-3xl bg-gradient-to-r from-sky-600 via-indigo-600 to-sky-700 p-6 sm:p-10 lg:p-12 text-white shadow-2xl border border-sky-400/30 overflow-hidden">
+          {/* Subtle background glow bên trong card */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
             <div className="lg:col-span-8 space-y-3.5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Trải Nghiệm Bản Thử Nghiệm Sớm (Early Access)</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
+              <h3 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
                 Sẵn Sàng Trải Nghiệm Giáo Viên AI ABSOFT & Đối Thoại Cùng 6 Thành Viên?
               </h3>
-              <p className="text-sky-100 text-sm sm:text-base max-w-2xl font-light leading-relaxed">
+              <p className="text-sky-100 text-xs sm:text-base max-w-2xl font-light leading-relaxed">
                 Đăng ký ngay một suất tham dự Workshop Online để xem Live Demo, tương tác trực tiếp với Giáo viên AI trên chính giáo trình của bạn, và thảo luận chuyên sâu cùng đội ngũ sáng lập IGNITEX từ Trường Đại học Giao thông Vận tải (UTC).
               </p>
             </div>
@@ -32,14 +32,14 @@ export default function Footer({ onOpenWorkshopModal }) {
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
               <button
                 onClick={onOpenWorkshopModal}
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-bold text-slate-900 bg-white hover:bg-slate-100 shadow-xl shadow-slate-950/20 hover:scale-105 active:scale-100 transition-all text-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-2xl font-bold text-slate-900 bg-white hover:bg-slate-100 shadow-xl shadow-slate-950/20 hover:scale-105 active:scale-100 transition-all text-xs sm:text-sm"
               >
                 <Calendar className="w-4 h-4 text-sky-600" />
                 <span>Đăng Ký Tham Dự Workshop</span>
               </button>
               <a
                 href="#solution"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-white bg-white/15 hover:bg-white/20 border border-white/20 transition-all text-xs"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3.5 rounded-2xl font-semibold text-white bg-white/15 hover:bg-white/20 border border-white/20 transition-all text-xs"
               >
                 <span>Xem Lại 3 Trụ Cột Công Nghệ</span>
               </a>
@@ -48,10 +48,15 @@ export default function Footer({ onOpenWorkshopModal }) {
         </div>
       </div>
 
+      {/* Ambient background glows bọc trong container overflow-hidden riêng để không gây cuộn ngang */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      </div>
+
       {/* Main Footer Links & University Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-          
+
           {/* Col 1: Brand Info & Mission */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">

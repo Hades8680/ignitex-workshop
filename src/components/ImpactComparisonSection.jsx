@@ -11,13 +11,13 @@ const caseIcons = {
 
 export default function ImpactComparisonSection() {
   return (
-    <section id="impact" className="py-20 md:py-28 bg-slate-50 relative overflow-hidden">
+    <section id="impact" className="pt-20 pb-28 md:pt-28 md:pb-36 bg-slate-50 relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       <div className="absolute top-1/2 right-10 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-2xs">
