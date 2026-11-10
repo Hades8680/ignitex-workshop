@@ -138,7 +138,7 @@ function MemberCard({ member, index }) {
 
         <div className="flex-1 min-w-0 pt-0.5">
           {member.role && (
-            <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-bold text-white bg-gradient-to-r ${member.roleBadgeColor} shadow-xs mb-1.5`}>
+            <span className={`inline-block px-3 py-1 rounded-xl leading-snug text-[11px] font-bold text-white bg-gradient-to-r ${member.roleBadgeColor} shadow-xs mb-1.5`}>
               {member.role}
             </span>
           )}

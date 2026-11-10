@@ -69,8 +69,8 @@ export const teamSectionIntro = {
 export const teamMembers = [
   {
     id: 1,
-    name: "Lê Tiến Dũng",
-    role: "Leader",
+    name: "Lê Văn Dũng",
+    role: "Chủ tịch Công ty CP Tập đoàn Công nghệ ABSoft",
     roleBadgeColor: "from-sky-500 to-blue-600",
     academicInfo: "Sinh viên Quản trị kinh doanh - Đại học Giao thông Vận tải",
     // ==========================================

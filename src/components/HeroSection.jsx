@@ -8,8 +8,8 @@ export default function HeroSection({ onOpenWorkshopModal }) {
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-slate-100">
       {/* UTC 15-Storey Building Grand Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img 
-          src="./images/utc-15-tang.jpg" 
+        <img
+          src="./images/utc-15-tang.jpg"
           alt="Tòa nhà 15 tầng Đại học Giao thông Vận tải UTC"
           className="w-full h-full object-cover object-[center_30%] scale-100 transition-transform duration-1000"
         />
@@ -25,9 +25,9 @@ export default function HeroSection({ onOpenWorkshopModal }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Headline, In-depth Narrative & CTAs */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -91,7 +91,7 @@ export default function HeroSection({ onOpenWorkshopModal }) {
           </motion.div>
 
           {/* Right Column: Interactive AI Tutor Simulation Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -151,7 +151,7 @@ export default function HeroSection({ onOpenWorkshopModal }) {
                       <p className="text-slate-600 leading-relaxed text-xs sm:text-sm">
                         Theo đúng bài giảng của <strong>Thầy Dũng trên lớp</strong>, trước khi chọn công cụ, em hãy nhìn lại <em>tập xác định của biến số <strong>x</strong></em>. Biến <strong>x</strong> ở đây là số lượng sản phẩm thì có thể nhận giá trị âm hay không?
                       </p>
-                      
+
                       <div className="p-2.5 rounded-xl bg-indigo-50/70 border border-indigo-100 text-[11px] text-indigo-900 space-y-1">
                         <div className="flex items-center gap-1.5 font-bold">
                           <ShieldCheck className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
