@@ -153,7 +153,7 @@ export const teamMembers = [
     academicInfo: "Sinh viên Quản trị kinh doanh K66 - Đại học Giao thông Vận tải",
     // ==========================================
     // Ảnh đại diện thật từ thư mục IMG:
-    avatarUrl: "./avatars/dao-quynh-anh.jpg",
+    avatarUrl: "./avatars/dao-quynh-anh-crop.jpg",
     avatarPosition: "object-[center_18%]",
     // ==========================================
     fallbackAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
@@ -205,7 +205,7 @@ export const teamMembers = [
     academicInfo: "Sinh viên Quản trị kinh doanh - Chất lượng cao K66 - Đại học Giao thông Vận tải",
     // ==========================================
     // Ảnh đại diện thật từ thư mục IMG:
-    avatarUrl: "./avatars/nguyen-hong-nhan.jpg",
+    avatarUrl: "./avatars/nguyen-hong-nhan-crop.jpg",
     avatarPosition: "object-[center_18%]",
     // ==========================================
     fallbackAvatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80",
